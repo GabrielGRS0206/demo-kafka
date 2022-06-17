@@ -11,4 +11,5 @@ public class Notification {
     private Long client;
     private String description;
     private TypeNotification typeNotification;
+
 }

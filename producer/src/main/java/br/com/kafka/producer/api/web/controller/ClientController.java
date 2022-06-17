@@ -1,10 +1,8 @@
 package br.com.kafka.producer.api.web.controller;
 
 import br.com.kafka.producer.api.web.dto.request.NotificationRequestDto;
-import br.com.kafka.producer.api.web.mapper.NotificationMapper;
 import br.com.kafka.producer.domain.model.Notification;
 import br.com.kafka.producer.domain.service.NotificationService;
-import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,11 +17,14 @@ public class ClientController {
     @Autowired
     private NotificationService service;
 
-    NotificationMapper mapper = Mappers.getMapper( NotificationMapper.class );
+    //NotificationMapper mapper = Mappers.getMapper( NotificationMapper.class );
 
     @PostMapping
     public ResponseEntity<String> notification(@RequestBody NotificationRequestDto notification){
-        service.notification(mapper.toEntity(notification));
+        service.notification(Notification.builder()
+                .client(notification.getClient())
+                .description(notification.getDescription())
+                .typeNotification(notification.getTypeNotification()).build());
         return null;
     }
 }
