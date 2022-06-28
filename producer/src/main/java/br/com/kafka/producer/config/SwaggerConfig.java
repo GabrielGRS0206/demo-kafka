@@ -1,4 +1,4 @@
-package br.com.kafka.producer.api.web.config;
+package br.com.kafka.producer.config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;

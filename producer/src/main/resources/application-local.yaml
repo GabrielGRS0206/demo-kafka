@@ -1,0 +1,24 @@
+#springdoc.packagesToScan=br.com.kafka.producer.api.web.controller
+##springdoc.pathsToMatch=/v1, /api/balance/**
+#
+#server.port=8090
+#
+#notifications.topics.producer.topic-notification: topic-notification-message
+#notifications.topics.producer.topic-notification-email: topic-notification-email
+
+server:
+  port: 8090
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+notifications:
+      topics.producer.topic-notification: topic-notification-message
+      topics.producer.topic-notification-email: topic-notification-email
+
+kafka:
+bootstrapServers: 127.0.0.1:9092
+acksConfig: all
+retriesConfig: 10
+schemaRegistryUrl: "http://127.0.0.1:8081"

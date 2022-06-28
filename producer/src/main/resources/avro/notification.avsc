@@ -1,0 +1,23 @@
+{
+     "type": "record",
+     "namespace": "com.irs.register.avro.notification",
+     "name": "Notification",
+     "version": "1",
+     "fields": [
+            {  "name": "client",
+                "type": "long"
+            },
+            { "name": "description",
+                "type": "string"
+            },
+             { "name": "type",
+                "type": "string"
+            },
+             { "name": "date",
+                "type": "string"
+            },
+             { "name": "producerNotification",
+                "type": "string"
+            }
+     ]
+}
