@@ -13,5 +13,5 @@ public class NotificationRequestDto {
     private String description;
     private String type;
     private LocalDate date;
-    private String producerNotification;
+    private String system;
 }

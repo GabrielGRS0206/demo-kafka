@@ -27,7 +27,7 @@ public class ClientController {
                         .setDescription(request.getDescription())
                         .setType(request.getType())
                         .setDate(request.getDate().toString())
-                        .setProducerNotification(request.getProducerNotification())
+                        .setSystem(request.getSystem())
                         .build()
 
                 );

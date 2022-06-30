@@ -16,7 +16,7 @@
              { "name": "date",
                 "type": "string"
             },
-             { "name": "producerNotification",
+             { "name": "system",
                 "type": "string"
             }
      ]
