@@ -1,7 +1,7 @@
 {
-     "type": "record",
-     "namespace": "com.irs.register.avro.notification",
+     "namespace": "br.com.kafka.request",
      "name": "Notification",
+     "type": "record",
      "version": "1",
      "fields": [
             {  "name": "client",

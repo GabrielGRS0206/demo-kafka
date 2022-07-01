@@ -2,7 +2,7 @@ package br.com.kafka.producer.api.web.controller;
 
 import br.com.kafka.producer.api.web.dto.request.NotificationRequestDto;
 import br.com.kafka.producer.kafka.NotificationProducer;
-import com.irs.register.avro.notification.Notification;
+import br.com.kafka.request.Notification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

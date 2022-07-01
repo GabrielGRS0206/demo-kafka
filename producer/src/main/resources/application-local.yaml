@@ -9,16 +9,21 @@
 server:
   port: 8090
 
-spring:
-  main:
-    allow-bean-definition-overriding: true
-
 notifications:
       topics.producer.topic-notification: topic-notification-message
       topics.producer.topic-notification-email: topic-notification-email
 
-kafka:
-bootstrapServers: 127.0.0.1:9092
-acksConfig: all
-retriesConfig: 10
-schemaRegistryUrl: "http://127.0.0.1:8081"
+spring:
+  kafka:
+    consumer:
+      enable-auto-commit: false
+      auto-offset-reset: latest
+      group-id: group-notification
+      key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      key.serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+
